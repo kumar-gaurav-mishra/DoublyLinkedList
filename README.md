@@ -6,13 +6,13 @@ Javascript Implementation of Doubly Linked List
 
 ```Installation
 
-npm install doubly-linked-list
+npm install js-doubly-linked-list
 
 ```
 
 ```Javascript
 
- const DoublyLinkedList = require('doubly-linked-list');
+ const DoublyLinkedList = require('js-doubly-linked-list');
  let list = new DoublyLinkedList();
 
  list.push(1); //Pushes value to the list
