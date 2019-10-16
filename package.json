@@ -1,0 +1,31 @@
+{
+  "name": "@kumarx/doubly-linked-list",
+  "version": "1.0.0",
+  "description": "Javascript Implementation of Doubly Linked List",
+  "main": "index.js",
+  "scripts": {
+    "test": "_mocha",
+    "coverage": "nyc --reporter html --reporter text npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumar-gaurav-mishra/DoublyLinkedList.git"
+  },
+  "keywords": [
+    "Javascript",
+    "DataStructure",
+    "DoublyLinkedList",
+    "list"
+  ],
+  "author": "Kumar Gaurav Mishra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kumar-gaurav-mishra/DoublyLinkedList/issues"
+  },
+  "homepage": "https://github.com/kumar-gaurav-mishra/DoublyLinkedList#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1"
+  }
+}
