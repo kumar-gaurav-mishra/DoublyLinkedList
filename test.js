@@ -1,11 +1,11 @@
 'use strict';
 const chai = require('chai');
 chai.should();
-let SinglyLinkedList = require('./index');
-describe('Singly Linked List', () => {
+let DoublyLinkedList = require('./index');
+describe('Doubly Linked List', () => {
   let list;
   beforeEach(() => {
-    list = new SinglyLinkedList();
+    list = new DoublyLinkedList();
     [1, 2, 3, 4, 5].forEach(el => list.push(el));
   });
   describe('Instantiation', () => {
@@ -15,6 +15,7 @@ describe('Singly Linked List', () => {
     });
     it('Instances and Values', () => {
       list.length.should.be.equals(5);
+      console.log(list);
       list.get(0).value.should.be.equals(1);
       list.get(1).value.should.be.equals(2);
       (list.get(-1) === null).should.be.equals(true);
@@ -34,10 +35,10 @@ describe('Singly Linked List', () => {
       list.pop();
       list.length.should.be.equals(4);
       (list.get(4) === null).should.be.equals(true);
-      let tempList = new SinglyLinkedList();
+      let tempList = new DoublyLinkedList();
       tempList.push(1);
       tempList.pop();
-      (tempList.pop() === undefined).should.be.equals(true);
+      (tempList.pop() === null).should.be.equals(true);
     });
     it('Shift Method', () => {
       list.length.should.be.equals(5);
@@ -45,8 +46,8 @@ describe('Singly Linked List', () => {
       list.shift();
       list.length.should.be.equals(4);
       list.get(0).value.should.be.equals(2);
-      let tempList = new SinglyLinkedList();
-      (tempList.shift() === undefined).should.be.equals(true);
+      let tempList = new DoublyLinkedList();
+      (tempList.shift() === null).should.be.equals(true);
       tempList.push(1);
       tempList.shift().value.should.be.equals(1);
     });
@@ -56,8 +57,8 @@ describe('Singly Linked List', () => {
       list.unShift(10);
       list.length.should.be.equals(6);
       list.get(0).value.should.be.equals(10);
-      (list.unShift() === undefined).should.be.equals(true);
-      let tempList = new SinglyLinkedList();
+      (list.unShift() === null).should.be.equals(true);
+      let tempList = new DoublyLinkedList();
       (tempList.unShift(5).head.value === 5).should.be.equals(true);
     });
     it('Insert Method', () => {
@@ -84,7 +85,7 @@ describe('Singly Linked List', () => {
       list.remove(0);
       list.length.should.be.equals(4);
       list.get(0).value.should.be.equals(2);
-      (list.remove(-1) === undefined).should.be.equals(true);
+      (list.remove(-1) === null).should.be.equals(true);
       (list.remove(0).value === 2).should.be.equals(true);
       (list.remove(2).value === 5).should.be.equals(true);
       list.push(10);
@@ -92,17 +93,17 @@ describe('Singly Linked List', () => {
       list.push(40);
       (list.remove(1).value === 4).should.be.equals(true);
     });
-    it('reverse Method', () => {
-      list.reverse();
-      list.length.should.be.equals(5);
-      list.get(0).value.should.be.equals(5);
-      list.get(1).value.should.be.equals(4);
-      list.get(2).value.should.be.equals(3);
-      list.get(3).value.should.be.equals(2);
-      list.get(4).value.should.be.equals(1);
-      let tempList = new SinglyLinkedList();
-      tempList.push(1);
-      tempList.reverse();
-    });
+    // it('reverse Method', () => {
+    //   list.reverse();
+    //   list.length.should.be.equals(5);
+    //   list.get(0).value.should.be.equals(5);
+    //   list.get(1).value.should.be.equals(4);
+    //   list.get(2).value.should.be.equals(3);
+    //   list.get(3).value.should.be.equals(2);
+    //   list.get(4).value.should.be.equals(1);
+    //   let tempList = new SinglyLinkedList();
+    //   tempList.push(1);
+    //   tempList.reverse();
+    // });
   });
 });
