@@ -102,12 +102,19 @@ class DoublyLinkedList {
       return removed;
     }
   }
+  reverse() {
+    if (this.length <= 1) return this;
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let next, prev = null;
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = node.prev;
+      node.prev = next;
+      node = next;
+    }
+    return this;
+  }
 }
-
-let list = new DoublyLinkedList();
-list.push(1);
-list.push(2);
-list.push(3);
-console.log(list.remove(2));
-
 module.exports = DoublyLinkedList;

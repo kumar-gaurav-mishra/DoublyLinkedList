@@ -15,7 +15,6 @@ describe('Doubly Linked List', () => {
     });
     it('Instances and Values', () => {
       list.length.should.be.equals(5);
-      console.log(list);
       list.get(0).value.should.be.equals(1);
       list.get(1).value.should.be.equals(2);
       (list.get(-1) === null).should.be.equals(true);
@@ -93,17 +92,17 @@ describe('Doubly Linked List', () => {
       list.push(40);
       (list.remove(1).value === 4).should.be.equals(true);
     });
-    // it('reverse Method', () => {
-    //   list.reverse();
-    //   list.length.should.be.equals(5);
-    //   list.get(0).value.should.be.equals(5);
-    //   list.get(1).value.should.be.equals(4);
-    //   list.get(2).value.should.be.equals(3);
-    //   list.get(3).value.should.be.equals(2);
-    //   list.get(4).value.should.be.equals(1);
-    //   let tempList = new SinglyLinkedList();
-    //   tempList.push(1);
-    //   tempList.reverse();
-    // });
+    it('reverse Method', () => {
+      list.reverse();
+      list.length.should.be.equals(5);
+      list.get(0).value.should.be.equals(5);
+      list.get(1).value.should.be.equals(4);
+      list.get(2).value.should.be.equals(3);
+      list.get(3).value.should.be.equals(2);
+      list.get(4).value.should.be.equals(1);
+      let tempList = new DoublyLinkedList();
+      tempList.push(1);
+      tempList.reverse();
+    });
   });
 });

@@ -1,5 +1,5 @@
 {
-  "name": "@kumarx/doubly-linked-list",
+  "name": "doubly-linked-list",
   "version": "1.0.0",
   "description": "Javascript Implementation of Doubly Linked List",
   "main": "index.js",
